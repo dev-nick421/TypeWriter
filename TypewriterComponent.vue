@@ -9,7 +9,7 @@
 <script setup>
 /* Super easy, drop in TypeWriter Component for Vue 3
  *
- * Just use like this <TypeWriter :texts="['TEXT1', 'TEXT2', 'TEXT3', 'TEXT4']" :eraseDelay="100" :typeDelay="100" :waitTimer="1800" /> */
+ * Just use like this <TypeWriter :texts="['TEXT1', 'TEXT2']" :eraseDelay="100" :typeDelay="100" :waitTimer="1800" /> */
 
 import { ref, watch, onMounted, defineProps } from "vue";
 
@@ -25,7 +25,7 @@ const startTyping = () => {
   // loop through texts
   if (currentIndex.value < texts.value.length) {
     const text = texts.value[currentIndex.value]; //get the text of this element
-    let index = 0; // index for looping through the word character by character
+    let index = 0; // i for looping through the word character by character
 
     const typingInterval = setInterval(() => {
       // typing interval
